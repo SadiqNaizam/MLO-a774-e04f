@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import defaultTheme from "tailwindcss/defaultTheme"; // Import defaultTheme
 
 export default {
 	darkMode: ["class"],
@@ -61,13 +62,19 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+        canvas: { // Added canvas background color
+          DEFAULT: 'hsl(var(--canvas-background))'
+        }
 			},
-			borderRadius: {
-				lg: 'var(--radius)',
-				md: 'calc(var(--radius) - 2px)',
-				sm: 'calc(var(--radius) - 4px)'
+			borderRadius: { // Updated border radius scale
+				lg: 'var(--radius)', // 4px (0.25rem)
+				md: '0.1875rem',    // 3px
+				sm: '0.125rem'     // 2px
 			},
+      fontFamily: { // Added custom font family
+        sans: ['var(--font-sans)', ...defaultTheme.fontFamily.sans],
+      },
 			keyframes: {
 				'accordion-down': {
 					from: {
