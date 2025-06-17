@@ -4,89 +4,97 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Base Theme Colors (Light Mode) - Cool Grays & Teal Accent */
+    --background: 220 20% 98%; /* Very light cool gray */
+    --foreground: 220 15% 25%; /* Dark cool gray for text */
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 220 20% 100%; /* White / slightly off-white */
+    --card-foreground: 220 15% 25%; /* Dark cool gray text on card */
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 220 20% 100%; /* White / slightly off-white */
+    --popover-foreground: 220 15% 25%; /* Dark cool gray text on popover */
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 160 70% 40%; /* Vibrant Teal - Main Accent */
+    --primary-foreground: 0 0% 100%; /* White text on primary */
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 220 15% 85%; /* Lighter cool gray for secondary elements */
+    --secondary-foreground: 220 15% 20%; /* Darker gray text on secondary */
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 220 15% 94%; /* Very light gray for muted text/elements */
+    --muted-foreground: 220 10% 50%; /* Medium gray for muted text */
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 160 70% 90%; /* Very light teal - for subtle accents */
+    --accent-foreground: 160 70% 30%; /* Darker teal text on light accent */
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%; /* Red for destructive actions */
+    --destructive-foreground: 0 0% 98%; /* Light text on destructive */
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 220 15% 88%; /* Subtle cool gray border */
+    --input: 220 15% 88%; /* Input field border */
+    --ring: 160 70% 45%; /* Teal - Focus Ring (consistent with primary accent) */
 
-    --radius: 0.5rem;
+    /* Corner Radius */
+    --radius: 0.25rem; /* 4px - Base radius */
 
-    --sidebar-background: 0 0% 98%;
+    /* Sidebar Specific Colors (Light Mode) */
+    --sidebar-background: 220 15% 96%; /* Cool gray for sidebar */
+    --sidebar-foreground: 220 15% 25%; /* Dark text for sidebar */
+    --sidebar-primary: 160 70% 40%; /* Teal - Active items in sidebar */
+    --sidebar-primary-foreground: 0 0% 100%; /* White text */
+    --sidebar-accent: 160 70% 85%; /* Lighter teal for hover/secondary highlights */
+    --sidebar-accent-foreground: 160 70% 30%; /* Darker teal text */
+    --sidebar-border: 220 15% 88%; /* Border for sidebar elements */
+    --sidebar-ring: 160 70% 45%; /* Teal - Focus ring for sidebar */
 
-    --sidebar-foreground: 240 5.3% 26.1%;
+    /* Canvas Background */
+    --canvas-background: 220 10% 92%; /* Light gray canvas */
 
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Typography */
+    --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    /* Base Theme Colors (Dark Mode) - Dark Grays & Teal Accent */
+    --background: 220 15% 10%; /* Very dark cool gray/near black */
+    --foreground: 220 10% 85%; /* Light gray for text */
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 220 15% 15%; /* Dark gray for cards */
+    --card-foreground: 220 10% 85%; /* Light gray text on card */
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 220 15% 15%; /* Dark gray for popovers */
+    --popover-foreground: 220 10% 85%; /* Light gray text on popover */
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 160 65% 50%; /* Vibrant Teal - Main Accent (slightly brighter for dark) */
+    --primary-foreground: 0 0% 100%; /* White text on primary */
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 220 15% 25%; /* Medium-dark gray */
+    --secondary-foreground: 220 10% 90%; /* Lighter gray text on secondary */
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 220 15% 20%; /* Darker gray for muted elements */
+    --muted-foreground: 220 10% 60%; /* Medium light gray for muted text */
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 160 60% 25%; /* Dark teal - for subtle accents */
+    --accent-foreground: 160 60% 80%; /* Light teal text on dark accent */
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 70% 50%; /* Red for destructive actions (adjusted for dark) */
+    --destructive-foreground: 0 0% 98%; /* Light text on destructive */
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --border: 220 15% 30%; /* Subtle dark gray border */
+    --input: 220 15% 30%; /* Input field border */
+    --ring: 160 65% 55%; /* Teal - Focus Ring (brighter for dark mode) */
+
+    /* Sidebar Specific Colors (Dark Mode) */
+    --sidebar-background: 220 15% 8%; /* Very dark gray for sidebar */
+    --sidebar-foreground: 220 10% 85%; /* Light text for sidebar */
+    --sidebar-primary: 160 65% 50%; /* Teal - Active items in sidebar */
+    --sidebar-primary-foreground: 0 0% 100%; /* White text */
+    --sidebar-accent: 160 60% 22%; /* Darker teal for hover/secondary highlights */
+    --sidebar-accent-foreground: 160 60% 75%; /* Light teal text */
+    --sidebar-border: 220 15% 25%; /* Border for sidebar elements */
+    --sidebar-ring: 160 65% 55%; /* Teal - Focus ring for sidebar */
+
+    /* Canvas Background */
+    --canvas-background: 220 10% 25%; /* Mid-dark gray canvas */
   }
 }
 
@@ -97,5 +105,6 @@
 
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-sans); /* Apply the base font family */
   }
 }
